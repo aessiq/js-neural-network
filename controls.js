@@ -7,7 +7,7 @@ class Controls {
         this.addKeyboardListeners();
     }
 
-    keyToProp = {
+    keyToDirection = {
         w: 'forward',
         s: 'reverse',
         a: 'left',
@@ -16,14 +16,14 @@ class Controls {
 
     addKeyboardListeners = () => {
         document.onkeydown = (event) => {
-            if (this.keyToProp[event.key]) {
-                this[this.keyToProp[event.key]] = true;
+            if (this.keyToDirection[event.key]) {
+                this[this.keyToDirection[event.key]] = true;
             }
         }
 
         document.onkeyup = (event) => {
-            if (this.keyToProp[event.key]) {
-                this[this.keyToProp[event.key]] = false;
+            if (this.keyToDirection[event.key]) {
+                this[this.keyToDirection[event.key]] = false;
             }
         }
     }
