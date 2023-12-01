@@ -7,7 +7,7 @@ const road = new Road(canvas.width / 2, canvas.width * 0.9, laneCount);
 const car = new Car(road.getLaneCenter(Math.floor(laneCount / 2)), 100, 30, 50);
 
 const animate = () => {
-    car.update();
+    car.update(road.borders);
 
     canvas.height = window.innerHeight;
 
